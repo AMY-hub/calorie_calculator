@@ -1,0 +1,122 @@
+.form {
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    color: $darkText;
+
+    &__info {
+        font-size: 0.9em;
+        padding-bottom: 0.2em;
+        color: #838383;
+    }
+
+    &__label {
+
+        @media(min-width: 720px) {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__text {
+        margin-bottom: 0.5em;
+        margin-right: 0.5em;
+    }
+
+    &__gender {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 0.7em;
+
+        label {
+            display: block;
+            height: 100%;
+            padding: 0.7em;
+            font-size: 1em;
+            background-color: #E8E8E8;
+            color: #838383;
+            border: 1.5px solid #838383;
+            cursor: pointer;
+        }
+
+        .form__man {
+            border-bottom-left-radius: 18px;
+            border-top-left-radius: 18px;
+            
+            &.active {
+                font-size: 1.2em;
+                font-weight: 600;
+                padding: 0.5em;
+                background-color: $manBg;
+                color: $manText;
+                border: 1.5px solid $manText; 
+            }
+        }
+
+        .form__woman {
+            border-bottom-right-radius: 18px;
+            border-top-right-radius: 18px;
+
+            &.active {
+                font-size: 1.2em;
+                font-weight: 600;
+                padding: 0.5em;
+                background-color: $womanBg;
+                color: $womanText;
+                border: 1.5px solid $womanText; 
+            }
+        }
+    }
+
+    input[type="number"] {
+        max-width: 20em;
+        padding: 0.2em;
+        background-color: $fieldBg;
+        color: $darkText;
+        border-radius: 0.3em;
+        font-size: 1em;
+
+        &:focus {
+            background-color: lighten($fieldBg, $amount: 3);
+            border: 1.5px solid $accentDark;
+        }
+    }
+
+    &__activity {
+        width: 100%;
+        border-radius: 0.3em;
+        padding: 0.3em;
+        font-size: 1em;
+        color: $darkText;
+        background-color: $fieldBg;
+
+        &:focus {
+            background-color: lighten($fieldBg, $amount: 3);
+            border: 1.5px solid $accentDark;
+        }
+
+        @media(min-width: 426px) {
+            width: 80%;;
+        }
+    }
+
+    &__calc {
+        max-width: fit-content;
+        margin-left: auto;
+    }
+
+    &__alert {
+        display: none;
+        font-size: 0.9em;
+        padding: 0.5em;
+        margin: 0.5em auto;
+        border-radius: 0.5em;
+        color: #c00000;
+        background-color: #ffeded;
+    }
+
+    &__alert.visible {
+        display: block;
+    }
+}

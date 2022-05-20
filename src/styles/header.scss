@@ -1,0 +1,20 @@
+.header {
+    text-align: center;
+    background: $accentDark;
+    color: $lightText;
+    clip-path: polygon(0 76%, 0 0, 100% 0, 100% 76%, 50% 100%);
+    margin-bottom: 1em;
+
+    h1 {
+        font-size: clamp(1.5em, 2vw, 1.9em);
+        padding-top: 0.7em;
+    }
+
+    span {
+        color: $accentBright;
+    }
+
+    @media(min-width: 720px) {
+        margin-bottom: 2em;
+    }
+}
