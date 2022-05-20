@@ -50,10 +50,10 @@ function showError(err) {
 
 function showResult(result) {
     elements.bmi.innerText = `${result.bmi} - ${result.bmiText}`;
-    elements.base.innerText = result.base;
-    elements.norm.innerText = result.norm;
-    elements.def15.innerText = result.def15;
-    elements.def20.innerText = result.def20;
+    elements.base.innerText = `${result.base} ккал`;
+    elements.norm.innerText = `${result.norm} ккал`;
+    elements.def15.innerText = `${result.def15} ккал`;
+    elements.def20.innerText = `${result.def20} ккал`;
 }
 
 function flipCard() {
