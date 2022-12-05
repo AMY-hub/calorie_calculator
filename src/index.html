@@ -61,7 +61,9 @@
             </label>
 
             <hr class="divider">
-            <button type="submit" class="btn form__calc" id="calc">Рассчитать</button>
+            <button type="submit" class="btn form__calc" id="calc">
+              Рассчитать
+            </button>
           </form>  
         
           <div class="main__card card-back result">
@@ -77,61 +79,89 @@
   
               <ul class="result__calories">
                 <li>
-                  <button class="result__show-more">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" fill="#438e96" xml:space="preserve">
-                      <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
-                      <g><path d="M70.7,157.1h862.8c0,0,126.3,7.3,1.1,162.6C831.9,447,669.5,661.9,564.7,800c-41.6,54.8-94.3,57.4-134.8,6.2C316.3,662.6,145,415.8,46.1,293.6C-47.6,178.1,70.7,157.1,70.7,157.1L70.7,157.1L70.7,157.1z"/></g>
-                      </svg>
-                  </button>
-                  <p>Базовый метаболизм
-                  (минимальная норма):</p>
-                  <span id="base">1331 ккал</span>
+                  <div class="result__content">
+                    <button 
+                    class="result__show-more"
+                    aria-label="Показать комментарий к результату">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" fill="#438e96" xml:space="preserve">
+                        <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                        <g><path d="M70.7,157.1h862.8c0,0,126.3,7.3,1.1,162.6C831.9,447,669.5,661.9,564.7,800c-41.6,54.8-94.3,57.4-134.8,6.2C316.3,662.6,145,415.8,46.1,293.6C-47.6,178.1,70.7,157.1,70.7,157.1L70.7,157.1L70.7,157.1z"/></g>
+                        </svg>
+                    </button>
+                    <p>Базовый метаболизм
+                    (минимальная норма):</p>
+                    <span id="base">1331 ккал</span>                    
+                  </div>
                   <div class="details">
-                    Это калории, которые сжигаются, когда вы находитесь в покое, и энергия тратится на обеспечение процессов дыхания, кровообращения, поддержание температуры тела и т.д.
-                    Нежелателен дефицит калорий ниже этого уровняю
+                    <div class="details__container">
+                      Это калории, которые сжигаются, когда вы находитесь в покое и энергия тратится на обеспечение процессов дыхания, кровообращения, поддержание температуры тела и т.д.
+                      Нежелателен дефицит калорий ниже этого уровня.                      
+                    </div>
                   </div>               
                 </li>
                 <li>
-                  <button class="result__show-more">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" fill="#438e96" xml:space="preserve">
-                      <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
-                      <g><path d="M70.7,157.1h862.8c0,0,126.3,7.3,1.1,162.6C831.9,447,669.5,661.9,564.7,800c-41.6,54.8-94.3,57.4-134.8,6.2C316.3,662.6,145,415.8,46.1,293.6C-47.6,178.1,70.7,157.1,70.7,157.1L70.7,157.1L70.7,157.1z"/></g>
-                      </svg>
-                  </button>
-                  <p>Поддержание веса(не набирать и не худеть):</p>
-                  <span id="norm">1331 ккал</span>
+                  <div class="result__content">
+                    <button 
+                    class="result__show-more"
+                    aria-label="Показать комментарий к результату">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" fill="#438e96" xml:space="preserve">
+                        <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                        <g><path d="M70.7,157.1h862.8c0,0,126.3,7.3,1.1,162.6C831.9,447,669.5,661.9,564.7,800c-41.6,54.8-94.3,57.4-134.8,6.2C316.3,662.6,145,415.8,46.1,293.6C-47.6,178.1,70.7,157.1,70.7,157.1L70.7,157.1L70.7,157.1z"/></g>
+                        </svg>
+                    </button>
+                    <p>Поддержание веса(не набирать и не худеть):</p>
+                    <span id="norm">1331 ккал</span>                    
+                  </div>
+
                   <div class="details">
-                    При сохранении текущего уровня активности ваш вес будет оставатьчя стабильным(без учета колебаний жидкости, пищевой массы в жкт (+/- 1-2 кг в любой момент)).
+                    <div class="details__container">
+                      При сохранении текущего уровня активности ваш вес будет оставаться стабильным( без учета колебаний жидкости, пищевой массы в жкт (+/- 1-2 кг в любой момент) ).                      
+                    </div>
                   </div>               
                 </li>
                 <li>
-                  <button class="result__show-more">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" fill="#438e96" xml:space="preserve">
-                      <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
-                      <g><path d="M70.7,157.1h862.8c0,0,126.3,7.3,1.1,162.6C831.9,447,669.5,661.9,564.7,800c-41.6,54.8-94.3,57.4-134.8,6.2C316.3,662.6,145,415.8,46.1,293.6C-47.6,178.1,70.7,157.1,70.7,157.1L70.7,157.1L70.7,157.1z"/></g>
-                      </svg>
-                  </button>
-                  <p>Медленное похудение
-                    (дефицит калорий 15%):</p>
-                  <span id="def15">1331 ккал</span>
+                  <div class="result__content">
+                    <button 
+                    class="result__show-more"
+                    aria-label="Показать комментарий к результату">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" fill="#438e96" xml:space="preserve">
+                        <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                        <g><path d="M70.7,157.1h862.8c0,0,126.3,7.3,1.1,162.6C831.9,447,669.5,661.9,564.7,800c-41.6,54.8-94.3,57.4-134.8,6.2C316.3,662.6,145,415.8,46.1,293.6C-47.6,178.1,70.7,157.1,70.7,157.1L70.7,157.1L70.7,157.1z"/></g>
+                        </svg>
+                    </button>
+                    <p>Медленное похудение
+                      (дефицит калорий 15%):</p>
+                    <span id="def15">1331 ккал</span>                    
+                  </div>
+
                   <div class="details">
-                    Наиболее оптимальный дефицит для комфортного снижения веса.
-                    При таком уровне дефицита возможна примерная скорость снижения веса 0,8 - 1,2 кг/мес.
+                    <div class="details__container">
+                      Наиболее оптимальный дефицит для безопасного снижения веса.
+                      При таком уровне дефицита возможна примерная скорость снижения веса 0,8 - 1,2 кг/мес.
+                    </div>
                   </div>               
                 </li>
                 <li>
-                  <button class="result__show-more">
-                    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" fill="#438e96" xml:space="preserve">
-                      <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
-                      <g><path d="M70.7,157.1h862.8c0,0,126.3,7.3,1.1,162.6C831.9,447,669.5,661.9,564.7,800c-41.6,54.8-94.3,57.4-134.8,6.2C316.3,662.6,145,415.8,46.1,293.6C-47.6,178.1,70.7,157.1,70.7,157.1L70.7,157.1L70.7,157.1z"/></g>
-                      </svg>
-                  </button>
-                  <p>Быстрое похудение
-                    (дефицит калорий 20%):</p>
-                  <span id="def20">1331 ккал</span> 
+                  <div class="result__content">
+                    <button 
+                    class="result__show-more"
+                    aria-label="Показать комментарий к результату">
+                      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" fill="#438e96" xml:space="preserve">
+                        <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>
+                        <g><path d="M70.7,157.1h862.8c0,0,126.3,7.3,1.1,162.6C831.9,447,669.5,661.9,564.7,800c-41.6,54.8-94.3,57.4-134.8,6.2C316.3,662.6,145,415.8,46.1,293.6C-47.6,178.1,70.7,157.1,70.7,157.1L70.7,157.1L70.7,157.1z"/></g>
+                        </svg>
+                    </button>
+                    <p>Быстрое похудение
+                      (дефицит калорий 20%):</p>
+                    <span id="def20">1331 ккал</span>                     
+                  </div>
+
                   <div class="details">
-                    Поможет обеспечить примерную скорость снижения веса 1,5 - 2 кг/мес.
-                    Не рекомендуется при низкой активности. Более высокий дефицит чреват растройствами нервной системы, срывами и в итоге низкой общей эффекивностью</div>             
+                    <div class="details__container">
+                      Поможет обеспечить примерную скорость снижения веса 1,5 - 2 кг/мес.
+                      Не рекомендуется при низкой активности. Более высокий дефицит чреват растройствами нервной системы, срывами и в итоге низкой общей эффекивностью
+                    </div>
+                  </div>             
                 </li>
               </ul>
               <div class="result__warning">

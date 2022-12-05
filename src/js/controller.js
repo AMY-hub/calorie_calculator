@@ -1,5 +1,13 @@
 import { validateFormData, calcResults } from './model';
-import {elements, getFormData, toggleGender, showError, showResult, showResultDetails, flipCard, clearFields} from './view'
+import {
+    elements, 
+    getFormData, 
+    toggleGender, 
+    showError, 
+    showResult, 
+    showResultDetails, 
+    flipCard, 
+    clearFields} from './view'
 
 elements.genderField.addEventListener('click', toggleGender);
 elements.calcBtn.addEventListener('click', handleFormData);
@@ -11,14 +19,8 @@ elements.resultList.addEventListener('click', showResultDetails);
 });
 
 function onChangeNumberField(e) {
-    const intRx = /\d/;    
-    if ( e.key ==='Tab' 
-    || e.key === 'ArrowLeft'
-    || e.key === 'ArrowRight'
-    || e.key ==='Backspace' 
-    || e.key ==='Delete' 
-    || intRx.test(e.key) ) return;
-    e.preventDefault();
+    const value = e.target.value.replace(/\D/g, "");
+    e.target.value = value;
 }
 
 function handleFormData(e) {
